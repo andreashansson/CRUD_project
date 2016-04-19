@@ -1,0 +1,19 @@
+{
+  "name": "crud_project",
+  "version": "1.0.0",
+  "description": "CRUD Project",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreashansson/CRUD_project.git"
+  },
+  "author": "Andreas Hansson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreashansson/CRUD_project/issues"
+  },
+  "homepage": "https://github.com/andreashansson/CRUD_project#readme"
+}
