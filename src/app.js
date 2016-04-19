@@ -11,7 +11,7 @@ app.use('/', express.static('public'));
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: false }));
 
-//app.use('/app', express.static('app'));
+app.use('/app', express.static('app'));
 
 app.use('/api', router);
 
