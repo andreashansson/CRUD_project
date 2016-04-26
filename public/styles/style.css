@@ -1,0 +1,127 @@
+body {
+
+    margin: 0px;
+    margin-bottom: 100px;
+
+}
+
+.addFormContainer {
+
+    margin-left: 20px;
+
+}
+
+.resursForm {
+
+    margin-left: 20px;
+
+}
+
+input[type=submit] {
+
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+
+}
+
+input[type=text] {
+
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 50%;
+    height: 30px;
+
+}
+
+.addFormContainer textarea {
+
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50%;
+    height: 200px;
+
+}
+
+.resursForm textarea {
+
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50%;
+    height: 100px;
+
+}
+
+.comments {
+
+    margin-left: 20px;
+    padding: 10px;
+    width: 50%;
+
+}
+
+.comments:nth-child(odd) {
+
+    background-color: grey;
+
+}
+
+.comments:nth-child(even) {
+
+    background-color: lightgrey;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: verdana;
+}
+
+nav ul li a:hover {
+
+    background-color: #111;
+    color: white;
+    text-decoration: none;
+
+}
+
+nav ul li a:link {
+
+	color: white;
+
+}
+
+nav ul li a:active {
+	
+	color: white;
+
+}
+
+nav ul li a:visited {
+	color: white;
+}

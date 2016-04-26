@@ -3,7 +3,9 @@ var mongoose = require('mongoose');
 var resursSchema = new mongoose.Schema({
 	
 	title: String,
-	input: String
+	example: String,
+	comments: Object,
+	date: String
 
 });
 

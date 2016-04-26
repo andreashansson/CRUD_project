@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<title>miniCRUD</title>
+		<meta charset="utf-8" />
+		<link href="styles/style.css" rel="stylesheet" type="text/css" />
+	
+	</head>
+
+	<body ng-app="app">
+
+		<nav>
+			<ul>
+				<li><a href="/">Hem</a></li>
+				<li><a href="/add">Lägg till</a></li>
+				<li><a href="/delete">Ta bort</a></li>
+				<li><a href="/resurs">Resurser</a></li>
+			</ul>
+		</nav>
+
+		<div ng-controller="resursController">
+
+			<div ng-repeat="out in output track by $index">
+
+				<div ng-click="getId(out._id)">{{out.title}}</div>
+
+			</div>
+
+			<h2>{{singleOutput[0].title}}</h2>
+			<p>{{singleOutput[0].example}}</p>
+
+			<div class="comments" ng-repeat="comment in singleOutput[0].comments">
+			
+				<div class="commentName">{{comment.name}}</div>
+				<div class="commentComment">{{comment.comment}}</div>
+				<div class="commentDate"><i>{{comment.date}}</i></div>
+
+			</div>
+
+			<div class="resursForm" ng-show="showForm">
+		    	
+		    	<h3>Kommentera resurs:</h3>
+		  		<form action="api/addcomment" method="POST">
+		  		
+		  			<input type="hidden" value="{{singleOutput[0]._id}}" id="commentId" name="commentId" /><br>
+		            <label for="name">Namn:</label><br>
+		            <input type="text" class="form-control" id="name" name="name" /><br><br>
+		            <label for="addcomment">Kommentar:</label><br>
+		            <textarea class="form-control" rows="4" id="addcomment" name="addcomment"></textarea><br><br>
+		        	<input type="submit" class="btn btn-default" value="Lägg till kommentar" /><br>
+		    	
+		    	</form>
+			</div>
+		</div>
+  
+		<script src="../app/angular.min.js"></script>
+		<script src="../app/app.js"></script>
+		<script src="../app/scripts/controllers/controller.js"></script>
+		<script src="../app/scripts/directives/directive.js"></script>
+		<script src="../app/scripts/services/service.js"></script>
+
+	</body>
+</html>
