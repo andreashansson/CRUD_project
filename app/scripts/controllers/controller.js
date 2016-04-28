@@ -90,6 +90,8 @@ app.controller('resursController', function($http, $scope) {
 
 		}
 
+
+
 		$scope.getId = function(id) {
 
 		$scope.showButton = true;
@@ -116,8 +118,5 @@ app.controller('resursController', function($http, $scope) {
 	   	// or server returns response with an error status.
 
 		});
-
 	}
-
 });
-

@@ -49,14 +49,15 @@
 
 				<div class="resursForm" ng-show="showContent">
 			    	
-			    	<strong>Kommentera resurs:</strong>
+			    	<h4>Kommentera resurs:</h4>
 			  		<form action="api/addcomment" method="POST">
 			  		
-			  			<input type="hidden" value="{{singleOutput[0]._id}}" id="commentId" name="commentId" /><br>
 			            <label for="name">Namn:</label><br>
 			            <input type="text" id="name" name="name" /><br><br>
 			            <label for="addcomment">Kommentar:</label><br>
 			            <textarea id="addcomment" name="addcomment"></textarea><br><br>
+			            <input type="hidden" value="{{singleOutput[0]._id}}" id="commentId" name="commentId" />
+
 			        	<input type="submit" value="Lägg till kommentar" /><br>
 			    	
 			    	</form>
