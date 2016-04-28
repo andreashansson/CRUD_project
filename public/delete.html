@@ -12,16 +12,18 @@
 
 	<body ng-app="app">
 
-	<nav>
-		<ul>
-			<li><a href="/">Hem</a></li>
-			<li><a href="/add">Lägg till</a></li>
-			<li><a href="/delete">Ta bort</a></li>
-			<li><a href="/resurs">Resurser</a></li>
-		</ul>
-	</nav>
+	<menu></menu>
 
-	Delete sidan
+	<div class="leftContent" ng-controller="resursController">
+
+		<h3>Ta bort resurs</h3>
+		
+		<div ng-repeat="out in output track by $index">
+
+			<div ng-click="delResurs(out._id)">{{out.title}}<div class="deleteBTN">Ta bort</div></div>
+
+		</div>
+	</div>
 
 		<script src="../app/angular.min.js"></script>
 		<script src="../app/app.js"></script>

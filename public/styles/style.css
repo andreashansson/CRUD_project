@@ -5,15 +5,82 @@ body {
 
 }
 
-.addFormContainer {
+menu {
 
-    margin-left: 20px;
+    margin: 0px;
+    padding-left: 0px;
 
 }
 
-.resursForm {
+.leftContent, .rightContent {
 
-    margin-left: 20px;
+    float: left;
+    padding: 25px;
+
+}
+
+.leftContent {
+
+    width: 150px;
+}
+
+.rightContent {
+
+    width: 63%;
+
+}
+
+p {
+
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    margin: 0px;
+
+}
+
+#txtFilter {
+
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 150px;
+    height: 20px;
+
+}
+
+#commentHideShow {
+
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 28px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 28px;
+    margin-bottom: 10px;
+
+}
+
+.deleteBTN {
+
+    width: 100px;
+    height: 20px;
+    color: white;
+    border-radius: 3px;
+    background-color: red;
+    text-align: center;
+    cursor: pointer;
+    font-family: verdana;
 
 }
 
@@ -34,7 +101,7 @@ input[type=text] {
     border: 2px solid black;
     border-radius: 5px;
     padding-left: 5px;
-    width: 50%;
+    width: 250px;
     height: 30px;
 
 }
@@ -45,7 +112,7 @@ input[type=text] {
     border: 2px solid black;
     border-radius: 5px;
     padding: 5px;
-    width: 50%;
+    width: 250px;
     height: 200px;
 
 }
@@ -56,16 +123,15 @@ input[type=text] {
     border: 2px solid black;
     border-radius: 5px;
     padding: 5px;
-    width: 50%;
+    width: 250px;
     height: 100px;
 
 }
 
 .comments {
 
-    margin-left: 20px;
     padding: 10px;
-    width: 50%;
+    width: 400px;
 
 }
 
@@ -81,25 +147,37 @@ input[type=text] {
 
 }
 
+.commentComment {
+
+    padding: 15px;
+
+}
+
 nav ul {
+
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+
 }
 
 nav ul li {
+
     float: left;
+
 }
 
 nav ul li a {
+
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-family: verdana;
+
 }
 
 nav ul li a:hover {
@@ -123,5 +201,7 @@ nav ul li a:active {
 }
 
 nav ul li a:visited {
+
 	color: white;
+
 }

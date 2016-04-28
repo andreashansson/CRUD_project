@@ -37,14 +37,29 @@ router.get('/add', function(req, res, next) {
 
 });
 
+router.delete('/delete/:id', function(req, res, next) {
 
-router.get('/delete', function(req, res, next) {
+	Resurs.remove({_id:req.params.id}).then(function(deleted) {
 
-	Resurs.find( ).then(function(allData) {
-
-		res.json(allData);
+		
+		res.end();
 
 	});
+
+});
+
+router.get('/aggregate', function(req, res, next) {
+
+	Resurs.aggregate([{ $group: { _id: "$title", num_of : { $sum: 1 }}}], function (err, result) {
+        
+        if (err) {
+            console.log(err);
+            return;
+        }
+
+        res.json(result);
+    
+    });
 
 });
 
@@ -79,43 +94,14 @@ router.post('/addcomment', function(req, res, next) {
 	//Resurs.update({ _id: req.body.commentId }, { $push: { comments: req.body.addcomment } });
 
 	var date = new Date();
-	date = date.toUTCString();
+	date = date.toGMTString();
 
 	Resurs.update({_id:req.body.commentId}, {$push: {comments: {name:req.body.name, comment: req.body.addcomment, date: date}}}).then(function(update) {
 		
 
 		res.redirect('/resurs');
 	});
-
-
-	/*
-
-	Resurs.findByIdAndUpdate(req.body.commentId, {
-
-		title: req.body.updateTitle,
-		example: req.body.updateExample,
-		comments: [req.body.addcomment]
-
-	}, function(err, updated) {
-
-		if (err) {
-
-			next(err);
-	
-		}
-
-		else {
-
-			res.redirect('/resurs');
-
-		}
-
-	});
-
-*/
 	
 });
-
-
 
 module.exports = router;
