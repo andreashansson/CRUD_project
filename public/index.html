@@ -21,9 +21,10 @@
 
 		<div class="rightContent" ng-controller="aggController">
 
+			<h3>Tillgängliga resurser</h3>
 			<div ng-repeat="aggOut in aggOutput track by $index">
 		
-				<h1>{{aggOut._id}} finns det {{aggOut.num_of}}st resurser med.</h1>
+				<p>{{aggOut._id}} finns det {{aggOut.num_of}}st resurser med.</p>
 
 			</div>
 

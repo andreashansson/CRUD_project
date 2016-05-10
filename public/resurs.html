@@ -22,22 +22,24 @@
 		<div class="main" ng-controller="resursController">
 
 			<div class="leftContent">
-				<h4>Sök resurs:</h4>
+				<h3>Sök resurs:</h3>
 				<p><input id="txtFilter" type="text" ng-model="textFilter" /></p>
 
 				<div ng-repeat="out in output | filter:textFilter track by $index">
 
-					<div ng-click="getId(out._id)">{{out.title}}</div>
+					<div class="resursMenu" ng-click="getId(out._id)">{{out.title}}</div>
 
 				</div>
 			</div>
 
 			<div class="rightContent">
 
-				<h4>{{singleOutput[0].title}}</h4>
+				<h3>{{singleOutput[0].title}}</h3>
 				<p>{{singleOutput[0].example}}</p>
 
-				<div id="commentHideShow" ng-show="showButton" ng-click="showContent=!showContent">Visa/Dölj Kommentarer</div>
+				<div id="commentHideShow" ng-show="showButton" ng-click="showContent=!showContent">Visa/Dölj Kommentarer</div>				
+				<div id="editHideShow" ng-show="showButton" ng-click="showEdit=!showEdit">Visa/Dölj Redigera</div>
+
 
 				<div class="comments" ng-show="showContent" ng-repeat="comment in singleOutput[0].comments">
 				
@@ -59,6 +61,22 @@
 			            <input type="hidden" value="{{singleOutput[0]._id}}" id="commentId" name="commentId" />
 
 			        	<input type="submit" value="Lägg till kommentar" /><br>
+			    	
+			    	</form>
+			    	
+				</div>
+				<div class="editForm" ng-show="showEdit">
+			    	
+			    	<h4>Redigera resurs:</h4>
+			  		<form action="api/edit" method="POST">
+			  		
+			            <label for="name">Titel:</label><br>
+			            <input type="text" id="name" name="editTitle" value="{{singleOutput[0].title}}" /><br><br>
+			            <label for="addcomment">Resurs:</label><br>
+			            <textarea id="addcomment" name="editExample">{{singleOutput[0].example}}</textarea><br><br>
+			            <input type="hidden" value="{{singleOutput[0]._id}}" id="commentId" name="commentId" />
+
+			        	<input type="submit" value="Uppdatera" /><br>
 			    	
 			    	</form>
 			    	

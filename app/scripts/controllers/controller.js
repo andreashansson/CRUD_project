@@ -1,4 +1,3 @@
-
 app.controller('main', function($scope) {
 
 	$scope.hej = "hejsan";
@@ -24,6 +23,7 @@ app.controller('aggController', function($http, $scope) {
 
 	}, function errorCallback(response) {
 
+		console.log(response);
 	// called asynchronously if an error occurs
 	// or server returns response with an error status.
 
@@ -89,8 +89,6 @@ app.controller('resursController', function($http, $scope) {
 			refresh();
 
 		}
-
-
 
 		$scope.getId = function(id) {
 

@@ -7,7 +7,7 @@
 		<title>miniCRUD</title>
 		<meta charset="utf-8" />
 		<link href="styles/style.css" rel="stylesheet" type="text/css" />
-	
+
 	</head>
 
 	<body ng-app="app">
@@ -17,7 +17,7 @@
 	<div class="leftContent" ng-controller="resursController">
 
 		<h3>Ta bort resurs</h3>
-		
+
 		<div ng-repeat="out in output track by $index">
 
 			<div ng-click="delResurs(out._id)">{{out.title}}<div class="deleteBTN">Ta bort</div></div>

@@ -22,11 +22,12 @@ menu {
 .leftContent {
 
     width: 150px;
+
 }
 
 .rightContent {
 
-    width: 63%;
+    width: 60%;
 
 }
 
@@ -35,6 +36,7 @@ p {
     margin: 0px;
     margin-top: 5px;
     margin-bottom: 5px;
+    
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,7 +63,7 @@ h4 {
 
 }
 
-#commentHideShow {
+#commentHideShow, #editHideShow {
 
     border: 2px solid black;
     border-radius: 4px;
@@ -75,6 +77,10 @@ h4 {
     text-align: center;
     line-height: 28px;
     margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    display: inline-block;
 
 }
 
@@ -108,7 +114,7 @@ input[type=text] {
     border: 2px solid black;
     border-radius: 5px;
     padding-left: 5px;
-    width: 250px;
+    width: 200px;
     height: 30px;
 
 }
@@ -119,8 +125,14 @@ input[type=text] {
     border: 2px solid black;
     border-radius: 5px;
     padding: 5px;
-    width: 250px;
+    width: 400px;
     height: 200px;
+
+}
+
+.resursMenu {
+
+    cursor: pointer;
 
 }
 
@@ -130,7 +142,18 @@ input[type=text] {
     border: 2px solid black;
     border-radius: 5px;
     padding: 5px;
-    width: 250px;
+    width: 100%;
+    height: 100px;
+
+}
+
+.editForm textarea {
+
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
     height: 100px;
 
 }
@@ -138,19 +161,24 @@ input[type=text] {
 .comments {
 
     padding: 10px;
-    width: 400px;
+    width: 100%;
+    font-family: verdana;
 
 }
 
 .comments:nth-child(odd) {
 
-    background-color: grey;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 
 }
 
 .comments:nth-child(even) {
 
-    background-color: lightgrey;
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
 
 }
 

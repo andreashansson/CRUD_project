@@ -1,5 +1,5 @@
 var express = require('express');
-var Resurs = require('../models/model'); // eller vad vår model-fil heter
+var Resurs = require('../models/model');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
@@ -28,20 +28,11 @@ router.get('/resurs/:id', function(req, res, next) {
 	});
 });
 
-router.get('/add', function(req, res, next) {
-
-	console.log(req);
-	console.log("Detta är add routern");
-	res.send("Detta är add routern");
-	res.end();
-
-});
 
 router.delete('/delete/:id', function(req, res, next) {
 
 	Resurs.remove({_id:req.params.id}).then(function(deleted) {
 
-		
 		res.end();
 
 	});
@@ -87,19 +78,40 @@ router.post('/resurs', function(req, res, next) {
 
 });
 
+router.post('/edit', function(req, res, next) {
+
+	console.log(req.body);
+
+	var id = req.body.commentId;
+	var title = req.body.editTitle;
+	var example = req.body.editExample;
+
+	Resurs.findByIdAndUpdate(id, { $set: 
+		
+		{ 
+			title: title,
+			example: example 
+		}
+
+	}, function (err, tank) {
+  		
+  		if (err) return handleError(err);
+  		
+  		res.redirect('/resurs');
+	
+	});
+	
+});
+
 router.post('/addcomment', function(req, res, next) {
-
-	//hämta hela arrayen pusha på det nya objektet och uppdatera på id med den nya arrayen som har nästa objekt i sig.
-
-	//Resurs.update({ _id: req.body.commentId }, { $push: { comments: req.body.addcomment } });
 
 	var date = new Date();
 	date = date.toGMTString();
 
 	Resurs.update({_id:req.body.commentId}, {$push: {comments: {name:req.body.name, comment: req.body.addcomment, date: date}}}).then(function(update) {
 		
-
 		res.redirect('/resurs');
+
 	});
 	
 });
