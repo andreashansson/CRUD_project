@@ -36,7 +36,7 @@ Här ser du en lista på alla resurser och en röd knapp med tabort. Klickar du 
 Här får du upp en meny på alla dom inlagda resurserna. Du har även en sökfunktion som kan filtrera bort resurser om du har väldigt många resurser i databasen kan den funktionen vara bra att använda.
 Klickar du på en resurs i menyn till vänster så kommer informationen om resursen fram till höger om menyn.
 
-Här har du även 2 knappar där du kan välja visa/dölj kommentarer. Klickar du på knappen visa/dölj kommentarer kommer ett kommentars formulär fram där du kan kommentera. Klicka på knappen lägg till kommentar så läggs kommentaren till på denna resurs med datum.(detta skall ändras så att det inte är en post funktion och sidan laddas om.) Klickar du på visa/dölj knappen igen så döljs kommentearen och formuläret.
+Här har du även 2 knappar där du kan välja visa/dölj kommentarer. Klickar du på knappen visa/dölj kommentarer kommer ett kommentars formulär fram där du kan kommentera. Klicka på knappen lägg till kommentar så läggs kommentaren till på denna resurs med datum.(detta skall ändras så att det inte är en post funktion och sidan laddas om. Hade det inte vart så fint väder hade detta gjorts) Klickar du på visa/dölj knappen igen så döljs kommentearen och formuläret.
 
 Klickar du på Visa/dölj redigera så visas ett formulär med vald resurs. Du kan nu redigera informationen för denna resursen i formuläret klicka på Uppdatera så har resursen uppdaterats med den nya informationen.
 Klicka på Visa/dölj igen så döljs formuläret.
