@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 
 });
 
+//Get request på api/resurs
 router.get('/resurs', function(req, res, next) {
 
 	Resurs.find( ).then(function(allData) {
@@ -19,6 +20,7 @@ router.get('/resurs', function(req, res, next) {
 
 });
 
+//get request på api/resurs/whatever
 router.get('/resurs/:id', function(req, res, next) {
 
 	Resurs.find({_id:req.params.id}).then(function(idData) {
@@ -28,7 +30,7 @@ router.get('/resurs/:id', function(req, res, next) {
 	});
 });
 
-
+//delete på api/delete/id
 router.delete('/delete/:id', function(req, res, next) {
 
 	Resurs.remove({_id:req.params.id}).then(function(deleted) {
@@ -39,6 +41,7 @@ router.delete('/delete/:id', function(req, res, next) {
 
 });
 
+//get request på api/aggregagte
 router.get('/aggregate', function(req, res, next) {
 
 	Resurs.aggregate([{ $group: { _id: "$title", num_of : { $sum: 1 }}}], function (err, result) {
@@ -54,6 +57,7 @@ router.get('/aggregate', function(req, res, next) {
 
 });
 
+//POST på api/resurs
 router.post('/resurs', function(req, res, next) {
 
 	console.log(req.body);
@@ -78,6 +82,7 @@ router.post('/resurs', function(req, res, next) {
 
 });
 
+//POST på api/edit 
 router.post('/edit', function(req, res, next) {
 
 	console.log(req.body);
@@ -103,6 +108,7 @@ router.post('/edit', function(req, res, next) {
 	
 });
 
+// POST på api/addcomment //skall ändra denna med put och refresh
 router.post('/addcomment', function(req, res, next) {
 
 	var date = new Date();

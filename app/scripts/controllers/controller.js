@@ -4,6 +4,8 @@ app.controller('main', function($scope) {
 
 });
 
+
+//Denna kontrollern är kopplad index.html
 app.controller('aggController', function($http, $scope) {
 
 	$scope.aggOutput = "hejsan";
@@ -19,8 +21,6 @@ app.controller('aggController', function($http, $scope) {
 
 		$scope.aggOutput = response.data;
 
-		//console.log($scope.output[1]._id);
-
 	}, function errorCallback(response) {
 
 		console.log(response);
@@ -31,6 +31,7 @@ app.controller('aggController', function($http, $scope) {
 
 });
 
+//Denna är kopplad till resurs.html
 app.controller('resursController', function($http, $scope) {
 
 	$scope.output = null;
@@ -39,6 +40,7 @@ app.controller('resursController', function($http, $scope) {
 	$scope.showButton = false;
 	$scope.showResurs = true;
 
+	//funktion som refreshar altså den gör en ny get req på api/resurs
 	var refresh = function() {
 
 		$http.get('/api/resurs').success(function(response) {
