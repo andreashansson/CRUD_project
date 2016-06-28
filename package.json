@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/andreashansson/CRUD_project/issues"
   },
-  "homepage": "https://github.com/andreashansson/CRUD_project#readme"
+  "homepage": "https://github.com/andreashansson/CRUD_project#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.5.2"
+  }
 }
